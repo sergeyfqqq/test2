@@ -52,3 +52,34 @@ switch (num) {
     console.log('smth wrong');
     break;
 };
+
+
+let numb = 0;
+// while (numb < 10) {
+//     console.log(numb);
+//     numb++;
+// };
+
+// do {
+//     console.log(numb);
+//     numb++;
+// } while (numb <= 15);
+
+// for (let i = 0; i <= 8; i++) {
+//     console.log(i);
+// };
+
+// for (let i = 0; i <= 8; i++) {
+//     if (i == 5) {
+//         console.log(i);
+//         break;
+//     };
+//     console.log(i);
+// };
+
+for (let i = 0; i <= 8; i++) {
+    if (i == 5) {
+        continue;
+    };
+    console.log(i);
+};
