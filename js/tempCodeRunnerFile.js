@@ -1,20 +1,7 @@
+let arrow = [1, 15, 30, 45, 4],
+    // va = arrow.sort(function(a, b){
+    //     return a - b;
+    // });
+    bs = arrow.slice(2, 4);
 
-let user = {
-    name: 'sergey',
-    age: 22,
-    nationality: 'Ukrainian'
-};
-
-console.log(user.age);
-user.born = 1996;
-
-delete user.nationality;
-user.other = {
-    gender: 'male',
-    skin: 'white'
-};
-console.log(user);
-
-for (let key in user) {
-    console.log('This key ' + key + ' has a value ' + user[key]);
-};
+console.log(bs);

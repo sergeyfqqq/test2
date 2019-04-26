@@ -99,24 +99,67 @@
 //     console.log('i`m good');
 // });
 
-let user = {
-    name: 'sergey',
-    age: 22,
-    nationality: 'Ukrainian'
-};
+// let user = {
+//     name: 'sergey',
+//     age: 22,
+//     nationality: 'Ukrainian'
+// };
 
-console.log(user.age);
-user.born = 1996;
+// console.log(user.age);
+// user.born = 1996;
 
-delete user.nationality;
-user.other = {
-    gender: 'male',
-    skin: 'white'
-};
-console.log(user);
+// delete user.nationality;
+// user.other = {
+//     gender: 'male',
+//     skin: 'white'
+// };
+// console.log(user);
 
-for (let key in user) {
-    console.log('This key ' + key + ' has a value ' + user[key]);
-};
+// for (let key in user) {
+//     console.log('This key ' + key + ' has a value ' + user[key]);
+// };
 
-console.log(Object.keys(user).length);
+// console.log(Object.keys(user).length);
+
+let arr = [1, 3, 5, 6, 7, 8, 9, 10];
+
+// for (i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// };
+
+// arr.pop();
+// arr.push('190');
+// arr.shift();
+// arr.unshift('1111');
+
+// arr.forEach(function(item, i, array) {
+//     console.log(i + ': ' + item + ' (массив: ' + array + ' )');
+// });
+
+
+// console.log(arr);
+
+// let array = [1, 2, 3, 4, 5, 6, 7];
+
+// for (let key of array) {
+//     console.log(key);
+// };
+
+// let answer = prompt('', ''),
+//     arro = [];
+
+// arro = answer.split(',');
+// console.log(arro);
+
+// let arrow = ['sss', 'wwww', 'rrrr', 'qeqwe q'],
+//     va = arrow.join(', ');
+
+// console.log(va);
+
+// let arrow = [1, 15, 30, 45, 4],
+//     // va = arrow.sort(function(a, b){
+//     //     return a - b;
+//     // });
+//     bs = arrow.slice(2, 4);
+
+// console.log(bs);
