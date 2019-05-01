@@ -163,3 +163,19 @@ let arr = [1, 3, 5, 6, 7, 8, 9, 10];
 //     bs = arrow.slice(2, 4);
 
 // console.log(bs);
+
+let soldier = {
+    health: 400,
+    armor: 100,
+    ms: 2
+};
+
+let ryan = {
+    name: 'ryan',
+    age: 25
+};
+
+ryan.__proto__ = soldier;
+
+console.log(ryan);
+console.log(ryan.ms);
