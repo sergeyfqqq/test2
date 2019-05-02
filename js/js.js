@@ -1,23 +1,24 @@
-// let money = prompt('Ваш бюджет на месяц?'),
-//     time = prompt('Введите дату в формате YYYY/MM/DD'),
-//     itemOf = prompt('Введите обязательную статью расходов в этом месяце'),
-//     cost = prompt('Во сколько ободётся?');
+let money = prompt('Ваш бюджет на месяц?'),
+     time = prompt('Введите дату в формате YYYY/MM/DD');
 
-//  let appData = {
-//     budget: money,
-//     timeData: time,
-//     expenses: {
-//         itemOf: cost
-//     },
-//     optionalExpenses: {
+  let appData = {
+    budget: money,
+     timeData: time,
+    expenses: {
+     },
+     optionalExpenses: {
 
-//     },
-//     income: [],
-//     savings: false
-// };
+     },
+     income: [],
+     savings: false
+};
 
-// let budgetPerDay = money / 30;
-// alert(budgetPerDay);
+for (let i = 0; i < 2; i++ ) {
+  let a = prompt('Введите обязательную статью расходов в этом месяце', ''),
+      a1 = prompt('Во сколько обойдется?', '');
+    console.log('done');
+    appData.expenses[a] = a1;
+};
 
 
 
