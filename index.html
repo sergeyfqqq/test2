@@ -6,12 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    
-    <button class="waves-effect waves-light btn">1</button>
-    <button class="waves-effect waves-light btn">2</button>
-    <button class="waves-effect waves-light btn">3</button>
+    <h1 class="heading">Рассчитать бюджет на день</h1>
+    <blockquote class="remark">
+        тестовое приложение, созданное в процессе обучения
+    </blockquote>
+    <form action="" class="form">
+        <p>
+            <label for="money">Ваш бюджет на месяц?</label>
+            <input id="money" type="number" class="validate">
+        </p>
+        <p>
+            <label for="first_name">Выберите дату</label>
+            <input id="first_name" type="date" class="validate">
+        </p>
+        <p>
+            <label for="first_name">Введите обязательную статью расходов в этом месяце</label>
+            <input id="first_name" type="text" class="validate">
+        </p>
+        <p>
+            <label for="first_name">Во сколько ободётся?</label>
+            <input id="first_name" type="number" class="validate">
+        </p>
+        <button class="btn" type="submit">Рассчитать</button>
+    </form>
+
+    <div class="wrap">
+        <div class="div1">
+                <div class="div2" id="div2"></div>
+        </div>
+        <button class="button" id='btn'>Animate</button>
+    </div>  
+
+
+
+
     <script src="js/script.js"></script>
     <script src="js/js.js"></script>
 </body>

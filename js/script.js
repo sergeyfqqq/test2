@@ -121,7 +121,7 @@
 
 // console.log(Object.keys(user).length);
 
-let arr = [1, 3, 5, 6, 7, 8, 9, 10];
+// let arr = [1, 3, 5, 6, 7, 8, 9, 10];
 
 // for (i = 0; i < arr.length; i++) {
 //     console.log(arr[i]);
@@ -164,18 +164,38 @@ let arr = [1, 3, 5, 6, 7, 8, 9, 10];
 
 // console.log(bs);
 
-let soldier = {
-    health: 400,
-    armor: 100,
-    ms: 2
+// let soldier = {
+//     health: 400,
+//     armor: 100,
+//     ms: 2
+// };
+
+// let ryan = {
+//     name: 'ryan',
+//     age: 25
+// };
+
+// ryan.__proto__ = soldier;
+
+// console.log(ryan);
+// console.log(ryan.ms);
+
+let button = document.getElementById ('btn'),
+    div2 = document.getElementById('div2');
+
+function myAnime () {
+    let pos = 0;
+
+    let timeId = setInterval(anime, 1);
+    function anime () {
+        if (pos == 380){
+            clearInterval(timeId);
+        } else {
+            pos++;
+            div2.style.left = pos + 'px';
+            div2.style.top = pos + 'px';
+        };
+    };
 };
 
-let ryan = {
-    name: 'ryan',
-    age: 25
-};
-
-ryan.__proto__ = soldier;
-
-console.log(ryan);
-console.log(ryan.ms);
+button.addEventListener('click', myAnime);
