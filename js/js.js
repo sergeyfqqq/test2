@@ -20,6 +20,8 @@ for (let i = 0; i < 2; i++ ) {
     appData.expenses[a] = a1;
 };
 
+alert(appData.budget / 30);
+
 
 
 
