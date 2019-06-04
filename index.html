@@ -60,40 +60,49 @@
                         <label for="percent">Процент</label>
                         <input type="text" class="main__deposit_input input" id="percent">
                     </p>
-                    <button class="main__deposit_btn btn">Начать рассчёт</button>
+                    <button class="main__deposit_btn btn" id='start'>Начать рассчёт</button>
                 </form>
             </div>
             <div class="column2">
                 <ul class="main__info">
                     <li class="main__info_item">
-                        Доход:
+                        Доход: <p id='budgetValue'></p>
                     </li>
                     <li class="main__info_item">
-                        Бюджет на 1 день: 
+                        Бюджет на 1 день: <p id='perDayValue'></p>
                     </li>
                     <li class="main__info_item">
-                        Уровень дохода:
+                        Уровень дохода: <p id='levelValue'></p>
                     </li>
                     <li class="main__info_item">
-                        Обязательные расходы:
+                        Обязательные расходы: <p id='expensesValue'></p>
                     </li>
                     <li class="main__info_item">
-                        Возможные траты:
+                        Возможные траты: <p id='optionalValue'></p>
                     </li>
                     <li class="main__info_item">
-                        Дополнительный доход:
+                        Дополнительный доход: <p id='otherValue'></p>
                     </li>
                     <li class="main__info_item">
-                        Накопления за месяц:
+                        Накопления за месяц: <p id='percentMonthValue'></p>
                     </li>
                     <li class="main__info_item">
-                        Накопления за год:
+                        Накопления за год: <p id='percentYearValue'></p>
                     </li>
                 </ul>
                 <ul class="main__info main__date">
-                        <li class="main__date_item">День:</li>
-                        <li class="main__date_item">Месяц:</li>
-                        <li class="main__date_item">Год:</li>
+                        <li class="main__date_item">
+                            День:
+                            <input type="text" id='dayValue' readonly>
+                        </li>
+                        <li class="main__date_item">
+                            Месяц:
+                            <input type="text" id='monthValue' readonly>
+                        </li>
+                        <li class="main__date_item">
+                            Год:
+                            <input type="text" id='yearValue' readonly>
+                        </li>
                 </ul>
             </div>
         </div>
