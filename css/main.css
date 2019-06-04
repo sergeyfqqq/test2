@@ -30,6 +30,10 @@
     color: #fff;
 }
 
+.btn:hover{
+    background-color: rgba(8, 232, 221, .7);
+}
+
 .blocks {
     padding: 2vh 0;
     text-align: center;
