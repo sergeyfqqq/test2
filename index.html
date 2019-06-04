@@ -5,45 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <h1 class="heading">Рассчитать бюджет на день</h1>
-    <blockquote class="remark">
-        тестовое приложение, созданное в процессе обучения
-    </blockquote>
-    <form action="" class="form">
-        <p>
-            <label for="money">Ваш бюджет на месяц?</label>
-            <input id="money" type="number" class="validate">
-        </p>
-        <p>
-            <label for="first_name">Выберите дату</label>
-            <input id="first_name" type="date" class="validate">
-        </p>
-        <p>
-            <label for="first_name">Введите обязательную статью расходов в этом месяце</label>
-            <input id="first_name" type="text" class="validate">
-        </p>
-        <p>
-            <label for="first_name">Во сколько ободётся?</label>
-            <input id="first_name" type="number" class="validate">
-        </p>
-        <button class="btn" type="submit">Рассчитать</button>
-    </form>
+    <header class="header">
+        <a href="" class="header__logo">
+            <span>money</span> keeper
+        </a>
+    </header>
+    <main class="main">
+        <h1 class="main__title">Расчёт дневного бюджета</h1>
+        <div class="wrap">
+            <div class="column1">
+                <form action="" class="main__expenses blocks">
+                    <p class="main__expenses_title subtitle">Введите обязательные расходы</p>
+                    <p class="main__expenses_item">
+                        <input class="main__expenses_input input" type="text" name="" id="" placeholder="Наименование">
+                        <input class="main__expenses_input input" type="text" name="" id="" placeholder="Цена">
+                    </p>
+                    <p class="main__expenses_item">
+                        <input class="main__expenses_input input" type="text" name="" id="" placeholder="Наименование">
+                        <input class="main__expenses_input input" type="text" name="" id="" placeholder="Цена">
+                    </p>
+                    <button type="submit" class="main__expenses_btn btn">Утвердить</button>
+                </form>
+                <form action="" class="main__optional blocks">
+                        <p class="main__optional_title subtitle">Введите не обязательные расходы</p>
+                        <p class="main__optional_item">
+                            <input class="main__optional_input input" type="text" name="" id="">
+                            <input class="main__optional_input input" type="text" name="" id="">
+                            <input class="main__optional_input input" type="text" name="" id="">
+                        </p>
+                        <button type="submit" class="main__expenses_btn btn">Утвердить</button>
+                </form>
+                
+                <div class="main__sunmit blocks">
+                    <p class="main__sunmit_title subtitle">Расчет дневного бюджета</p>
+                    <button class="maim__submit_button btn">Рассчитать</button>
+                </div>
 
-    <div class="wrap">
-        <div class="div1">
-                <div class="div2" id="div2"></div>
+                <div class="main__income blocks">
+                    <p class="main__income_title subtitle">Введите статьи возможного дохода (через запятую)</p>
+                    <input type="text" class="main__income_input input">
+                </div>
+                <form class="main__deposit blocks">
+                    <p class="main__deposit_title subtitle">
+                        <label for="deposit">Есть ли накопления</label>
+                        <input type="checkbox" id='deposit'>
+                    </p>
+                    <p class="main__deposit_item">
+                        <label for="sum">Сумма</label>
+                        <input type="text" class="main__deposit_input input" id="sum">
+                        <label for="percent">Процент</label>
+                        <input type="text" class="main__deposit_input input" id="percent">
+                    </p>
+                    <button class="main__deposit_btn btn">Начать рассчёт</button>
+                </form>
+            </div>
+            <div class="column2">
+                <ul class="main__info">
+                    <li class="main__info_item">
+                        Доход:
+                    </li>
+                    <li class="main__info_item">
+                        Бюджет на 1 день: 
+                    </li>
+                    <li class="main__info_item">
+                        Уровень дохода:
+                    </li>
+                    <li class="main__info_item">
+                        Обязательные расходы:
+                    </li>
+                    <li class="main__info_item">
+                        Возможные траты:
+                    </li>
+                    <li class="main__info_item">
+                        Дополнительный доход:
+                    </li>
+                    <li class="main__info_item">
+                        Накопления за месяц:
+                    </li>
+                    <li class="main__info_item">
+                        Накопления за год:
+                    </li>
+                </ul>
+                <ul class="main__info main__date">
+                        <li class="main__date_item">День:</li>
+                        <li class="main__date_item">Месяц:</li>
+                        <li class="main__date_item">Год:</li>
+                </ul>
+            </div>
         </div>
-        <button class="button" id='btn'>Animate</button>
-    </div>  
 
-
-
-
-    <!-- <script src="js/script.js"></script> -->
-    <script src="js/js.js"></script>
+        <script src="/js/script.js"></script>
 </body>
 </html>

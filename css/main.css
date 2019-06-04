@@ -1,57 +1,104 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-.heading {
-    text-align: center;
-}
-
-.remark {
-    margin-bottom: 50px;
-}
-
-.form {
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-    margin: 0 auto;
-}
-
-.form > p {
-    margin-bottom: 10px;
-}
-
-.form:hover {
-    cursor: pointer;
-}
-
-.btn {
-    width: 150px;
-    margin: 0 auto;
-}
-
-
-
-
-.div1 {
-    position: relative;
-    width: 500px;
-    height: 500px;
-    margin: 100px auto 10px;
-    border: 10px solid red;
-}
-
-.div2 {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background-color: blue;
+    box-sizing: border-box;
+    font-family: 'Ubuntu';
 }
 
 .wrap {
-    width: 600px;
-    height: 600px;
-    text-align: center;
+    display: flex;
+    width: 80%;
     margin: 0 auto;
+}
+
+.column1{
+    width: 60%;
+}
+
+.column2 {
+    width: 40%;
+}
+
+.btn {
+    background-color: #08E8DD;
+    padding: 7px 5px;
+    margin: 10px 0 0 0 ;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+}
+
+.blocks {
+    padding: 2vh 0;
+    text-align: center;
+}
+
+.input {
+    padding: 7px 5px;
+    outline: none;
+    margin: 0 0 5px 0;
+    border: none;
+    box-shadow: 0 2.5px 10px 0 rgba(1,0,42,.1);
+}
+
+.subtitle {
+    margin: 0 0 15px 0;
+}
+
+.header {
+    display: block;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 1.5px 10px 0 rgba(1,0,42,.05);
+}
+
+.header__logo {
+    text-decoration: none;
+    color: #000;
+    line-height: 60px;
+    font-size: 24px;
+}
+
+.header__logo > span {
+    color: #08E8DD;
+}
+
+.main {
+    padding: 5vh 0 0 0;
+    background: rgba(224, 224, 224, .4);
+}
+
+.main__title {
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+.main__income_input {
+    width: 100%;
+}
+
+.main__info {
+    list-style-type: none;
+    padding: 50px 30px;
+    margin: 50px 0 20px 30px;
+    background-color: #fff;
+    box-shadow: 0 1.5px 20px 0 rgba(1,0,42,.1);
+}
+
+.main__info_item {
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0 0 20px 0;
+}
+
+.main__date {
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-around; 
 }
