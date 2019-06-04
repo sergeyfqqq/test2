@@ -28,7 +28,7 @@
                         <input class="main__expenses_input input" type="text" name="" id="" placeholder="Наименование">
                         <input class="main__expenses_input input" type="text" name="" id="" placeholder="Цена">
                     </p>
-                    <button type="submit" class="main__expenses_btn btn">Утвердить</button>
+                    <button type="submit" class="main__expenses_btn btn" id='expensesConfirmBtn'>Утвердить</button>
                 </form>
                 <form action="" class="main__optional blocks">
                         <p class="main__optional_title subtitle">Введите не обязательные расходы</p>
@@ -37,18 +37,19 @@
                             <input class="main__optional_input input" type="text" name="" id="">
                             <input class="main__optional_input input" type="text" name="" id="">
                         </p>
-                        <button type="submit" class="main__expenses_btn btn">Утвердить</button>
+                        <button type="submit" class="main__expenses_btn btn" id="optionalConfirmBtn">Утвердить</button>
                 </form>
                 
                 <div class="main__sunmit blocks">
                     <p class="main__sunmit_title subtitle">Расчет дневного бюджета</p>
-                    <button class="maim__submit_button btn">Рассчитать</button>
+                    <button class="maim__submit_button btn" id='perDayBtn'>Рассчитать</button>
                 </div>
 
-                <div class="main__income blocks">
-                    <p class="main__income_title subtitle">Введите статьи возможного дохода (через запятую)</p>
-                    <input type="text" class="main__income_input input">
-                </div>
+                <form class="main__income blocks">
+                    <p class="main__income_title subtitle" >Введите статьи возможного дохода (через запятую)</p>
+                    <input type="text" class="main__income_input input" id='otherIncome'>
+                    <button type="submit" class="btn" id='otherIncomeBtn'>Добавить</button>
+                </form>
                 <form class="main__deposit blocks">
                     <p class="main__deposit_title subtitle">
                         <label for="deposit">Есть ли накопления</label>
