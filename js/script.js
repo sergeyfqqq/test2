@@ -17,6 +17,8 @@ let startBtn = document.getElementById('start'),
     perDayBtn = document.getElementById('perDayBtn'),
     otherIncomeBtn = document.getElementById('otherIncomeBtn'),
     depositCheckBtn = document.getElementById('deposit'),
+    depositSum = document.getElementById('sum'),
+    depositPercent = document.getElementById('percent'),
     
     expensesInput = document.querySelectorAll('.main__expenses_input'),
     otherIncomeInput = document.getElementById('otherIncome'),
@@ -75,18 +77,82 @@ optionalConfirmBtn.addEventListener('click', function(e){
 perDayBtn.addEventListener('click', function(e){
     e.preventDefault();
 
-    let result = money/30;
+    if (appData.budget) {
+        appData.monePerDay = (money/30).toFixed();
 
-    perDayValue.textContent = result;
+        perDayValue.textContent = appData.monePerDay;
+
+        if (appData.monePerDay <= 1000) {
+            level.textContent = 'bomj';
+        } else if (appData.monePerDay <= 5000) {
+            level.textContent = 'norm';
+        } else {
+            level.textContent = 'krasava';
+        }
+    } else {
+        level.textContent = 'error'
+    }
+    
 });
 
-otherIncomeBtn.addEventListener('click', function(e){
+otherIncomeInput.addEventListener('change', function(e){
     e.preventDefault();
 
-    let otherIncomeValue = otherIncome.value; 
-    
-    otherValue.textContent = otherIncomeValue;
+    let incomeItems = otherIncomeInput.value;
+    appData.income = incomeItems.split(', ');
+    otherValue.textContent = appData.income;
+
 });
+
+depositCheckBtn.addEventListener('click', function(e){
+
+    if (appData.savings) {
+        appData.savings = false;
+    } else {
+        appData.savings = true;
+    }
+});
+
+depositSum.addEventListener('input', function(e){
+
+    e.preventDefault();
+
+    if (appData.savings) {
+        let sum = +depositSum.value,
+            percent = +depositPercent.value;
+
+        appData.monthIncome = sum/100/12*percent;
+        appData.yearIconme = sum/100*percent;
+
+        perMonth.textContent = appData.monthIncome = sum/100/12*percent;
+        perYear.textContent = appData.yearIconme = sum/100*percent;
+    }
+
+});
+
+depositPercent.addEventListener('input', function(e){
+
+    e.preventDefault();
+
+    if (appData.savings) {
+        let sum = +depositSum.value,
+            percent = +depositPercent.value;
+
+        appData.monthIncome = sum/100/12*percent;
+        appData.yearIconme = sum/100*percent;
+
+        perMonth.textContent = appData.monthIncome = sum/100/12*percent;
+        perYear.textContent = appData.yearIconme = sum/100*percent;
+    }
+
+});
+
+// otherIncomeBtn.addEventListener('click', function(e){
+//     e.preventDefault();
+
+//     let otherIncomeValue = otherIncome.value; 
+//     otherValue.textContent = otherIncomeValue;
+// });
 
 
 
