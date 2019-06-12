@@ -101,17 +101,35 @@
 
 
 
-let name = 'sergey',
-    age = '22',
-    sex = 'male';
+// let name = 'sergey',
+//     age = '22',
+//     sex = 'male';
 
-document.write(`<h1>Пользователю ${name} ${age} года. Его пол ${sex}</h1>`);
-
-
+// document.write(`<h1>Пользователю ${name} ${age} года. Его пол ${sex}</h1>`);
 
 
 
 
+let uah = document.getElementById('uah'),
+    usd = document.getElementById('usd');
+
+uah.addEventListener('input', () => {
+    let request = new XMLHttpRequest();
+
+    request.open('GET', '/js/currnet.json');
+    request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+    request.send();
+
+    request.addEventListener('readystatechange', function(){
+        if (request.readyState === 4 && request.status == 200){
+            let data = JSON.parse(request.response);
+
+            usd.value = uah.value / data.usd.toFixed();
+        } else {
+            usd.value = 'Извините, что-то пошло не так :С';
+        }
+    });
+});
 
 
 
