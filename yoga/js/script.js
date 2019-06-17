@@ -115,8 +115,90 @@ window.addEventListener('DOMContentLoaded', function() {
         closePopup();
     });
 
+    // form
+
+    // let message = {
+    //     loading: 'Loading...',
+    //     success: 'Спасибо, скоро мы с Вами свяжемся!',
+    //     failure: 'Извините, что-то пошло не так :С'
+    // };
+
+    // let form = document.querySelector('.main-form'),
+    //     input = document.getElementsByTagName('input'),
+    //     statusMessage = document.createElement('div');
+
+    //     statusMessage.classList.add('status');
+
+    //     form.addEventListener('submit', function(event){
+    //         event.preventDefault();
+
+    //         form.appendChild(statusMessage);
+
+    //         let request = new XMLHttpRequest();
+    //         request.open('POST', 'server.php');
+    //         request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+
+    //         let formData = new FormData(form);
+    //         request.send(formData);
+
+    //         request.addEventListener('readystatechange', function() {
+
+    //         });
+
+    //         for (let i = 0; i < input.length; i++) {
+    //             input[i].value = '';
+    //         }
+    //     });
 
 
+    // SLIDER 
 
+    let slideIndex = 1,
+        slides = document.querySelectorAll('.slider-item'),
+        prev = document.querySelector('.prev'),
+        next = document.querySelector('.next'),
+        sliderDotsWrap = document.querySelector('.slider-dots'),
+        dots = document.querySelectorAll('.dot');
 
+    showSlides(slideIndex);
+    function showSlides(num) {
+        if (num > slides.length) {
+            slideIndex = 1;
+        } 
+        if (num < 1) {
+            slideIndex = slides.length;
+        }
+
+        slides.forEach((item) => item.style.display = 'none');
+        //same functions
+        // for (let i = 0; i < slides.length; i++) {
+        //     slides[i].style.display = 'none';
+        // }
+        dots.forEach((item) => item.classList.remove('dot-active'));
+
+        slides[slideIndex - 1].style.display = 'block';
+        dots[slideIndex - 1].classList.add('dot-active');
+    }
+
+    function swipeSlides(num) {
+        showSlides(slideIndex += num);   
+    }
+    function currentSlide(num) {
+        showSlides(slideIndex = num);
+    }
+
+    prev.addEventListener('click', function(){
+        swipeSlides(-1);
+    });
+    next.addEventListener('click', function(){
+        swipeSlides(1);
+    });
+
+    sliderDotsWrap.addEventListener('click', function(event) {
+        for (let i = 0; i < dots.length + 1; i++) {
+            if (event.target.classList.contains('dot') && event.target == dots[i - 1]) {
+                currentSlide(i);
+            }
+        }
+    });
 });
