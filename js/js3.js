@@ -33,3 +33,18 @@ tabsHeader.addEventListener('click', function(event) {
         }
     }
 });
+
+let age = document.getElementById('age'),
+    surname = 'fastovets',
+    name = 'sergey';
+
+let user = {
+    'age' : age.value,
+    'surname' : surname,
+    'name' : name,
+    showUser: function() {
+        alert("Пользователь " + surname + " " + name + ", его возраст " + this.age);
+    }
+};
+
+user.showUser();

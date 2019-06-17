@@ -8,6 +8,16 @@ window.addEventListener('DOMContentLoaded', function() {
         info = document.querySelector('.info-header'),
         tabContent = document.querySelectorAll('.info-tabcontent');
 
+    function addPopups() {
+        for (let i = 0; i < tabContent.length; i++) {
+            tabContent[i].querySelector('.description-btn').addEventListener('click', function(){
+                showPopup();
+            });
+        }
+    }
+
+    addPopups();
+
     function hideTabContent(a) {
         for (let i = a; i < tabContent.length; i++) {
             tabContent[i].classList.remove('show');
@@ -40,7 +50,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     //timer
 
-    let deadline = '2019-10-17';
+    let deadline = '2019-06-20';
 
     function getTimeRemaining(endtime) {
         let time = Date.parse(endtime) - Date.parse(new Date()),
@@ -52,7 +62,7 @@ window.addEventListener('DOMContentLoaded', function() {
             'total' : time,
             'hours' : hours,
             'minutes' : minutes,
-            'seconds' : seconds
+            'seconds' : seconds,
         };
     }
 
@@ -65,33 +75,44 @@ window.addEventListener('DOMContentLoaded', function() {
 
         function updateClock() {
             let time = getTimeRemaining(endtime);
-            hours.textContent = time.hours;
-            minutes.textContent = time.minutes;
-            seconds.textContent = time.seconds; 
+            hours.textContent = ('0' + time.hours).slice(-2);
+            minutes.textContent = ('0' + time.minutes).slice(-2);
+            seconds.textContent = ('0' + time.seconds).slice(-2); 
 
             if (time.total <=0 ) {
                 clearInterval(timeInterval);
+                hours.textContent = '00';
+                minutes.textContent = '00';
+                seconds.textContent = '00'; 
             }
         }
     }
 
     setClock('timer', deadline);
 
-    // modal popup
+    // modal popups
 
     let more = document.querySelector('.more'),
         popup = document.querySelector('.overlay'),
         close = document.querySelector('.popup-close');
 
-    more.addEventListener('click', function() {
+
+    function showPopup() {
         popup.style.display = 'block';
-        this.classList.add('fade');
         document.body.style.overflow = 'hidden';
+    }
+
+    function closePopup() {
+        popup.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+
+    more.addEventListener('click', function() {
+        showPopup();
     });
 
     close.addEventListener('click', function(){
-        popup.style.display = 'none';
-        document.body.style.overflow = '';
+        closePopup();
     });
 
 
