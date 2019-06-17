@@ -77,7 +77,22 @@ window.addEventListener('DOMContentLoaded', function() {
 
     setClock('timer', deadline);
 
+    // modal popup
 
+    let more = document.querySelector('.more'),
+        popup = document.querySelector('.overlay'),
+        close = document.querySelector('.popup-close');
+
+    more.addEventListener('click', function() {
+        popup.style.display = 'block';
+        this.classList.add('fade');
+        document.body.style.overflow = 'hidden';
+    });
+
+    close.addEventListener('click', function(){
+        popup.style.display = 'none';
+        document.body.style.overflow = '';
+    });
 
 
 
