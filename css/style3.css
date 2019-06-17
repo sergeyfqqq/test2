@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.tabs {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.tabs__header {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.tabs__tab {
+    cursor: pointer;
+}
+
+.tabs__tab:hover {
+    color: aqua;
+}
+
+.tabs__content {
+    list-style-type: none;
+}
+
+.yellow {
+    width: 300px;
+    height: 200px;
+    background-color: yellow;
+}
+
+.blue {
+    width: 300px;
+    height: 200px;
+    background-color: blue;
+}
+
+.green {
+    width: 300px;
+    height: 200px;
+    background-color: green;
+}
+
+.brown {
+    width: 300px;
+    height: 200px;
+    background-color: brown;
+}
