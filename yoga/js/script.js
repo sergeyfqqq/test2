@@ -201,4 +201,53 @@ window.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+
+    // calc
+
+    let  persons = document.querySelectorAll('.counter-block-input')[0],
+         restDays = document.querySelectorAll('.counter-block-input')[1],
+         place = document.getElementById('select'),
+         totalPrice = document.getElementById('total'),
+         personsSum = 0,
+         daysSum = 0,
+         totalSum = 0;
+
+         totalPrice.innerHTML = 0;
+
+        persons.addEventListener('change', function(){
+            personsSum = +this.value;
+            totalSum = (daysSum + personsSum) * 4000;
+
+            if (restDays.value == '') {
+                totalPrice.innerHTML = 0;
+            } else {
+                totalPrice.innerHTML = totalSum;
+            }
+        });
+
+        restDays.addEventListener('change', function(){
+            daysSum = +this.value;
+            totalSum = (daysSum + personsSum) * 4000;
+
+            if (persons.value == '') {
+                totalPrice.innerHTML = 0;
+            } else {
+                totalPrice.innerHTML = totalSum;
+            }
+        });
+
+        place.addEventListener('change', function(){
+            if (restDays.value == '' || persons.value == '') {
+                totalPrice.innerHTML = 0;
+            } else {
+                let a = totalSum;
+                totalPrice.innerHTML = a * this.options[this.selectIndex].value;
+            }
+        });
+
+
+
+
+    
 });

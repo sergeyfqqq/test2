@@ -59,3 +59,31 @@
     height: 200px;
     background-color: brown;
 }
+
+.main {
+    position: relative;
+}
+
+.main__slider {
+    width: 500px;
+    margin: 200px auto 0;
+    list-style-type: none;
+}
+
+.main__slide {
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+.main__slider_prev {
+    position: absolute;
+    top: 200px;
+    left: 390px;
+}
+
+.main__slider_next {
+    position: absolute;
+    top: 200px;
+    right: 490px;
+}
